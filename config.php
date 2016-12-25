@@ -19,6 +19,17 @@ class config
         require_once(__DIR__ . '/../environments.php');
         switch (self::ENVIRONMENT){
             case \environment::DEVELOPMENT:
+                return 'C:\inetpub\data\transposer';
+            case \environment::PRODUCTION:
+                return 'C:\inetpub\data\transposer';
+        }
+        return null;
+    }
+
+    public static function songlibroot(){
+        require_once(__DIR__ . '/../environments.php');
+        switch (self::ENVIRONMENT){
+            case \environment::DEVELOPMENT:
                 return 'C:\inetpub\data\transposer\transposer_songs';
             case \environment::PRODUCTION:
                 return 'C:\inetpub\data\transposer\transposer_songs';
@@ -34,5 +45,16 @@ class config
                 return 'C:\inetpub\data\transposer\temp';
         }
         return null;
+    }
+
+    public static function webroot(){
+        switch (self::ENVIRONMENT){
+            case \environment::DEVELOPMENT:
+                return 'http://services.conradkoh/transposer';
+            case \environment::PRODUCTION:
+                return 'http://services.conradkoh.com/transposer';
+        }
+        return null;
+
     }
 }

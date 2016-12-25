@@ -14,7 +14,15 @@ class songs
     public static function get_all_songs(){
         require_once(__DIR__ . '/../config.php');
         require_once(__DIR__ . '/../../lib/windows.php');
-        $files = windows::scandir(config::dataroot());
+        $files = windows::scandir(config::songlibroot());
         return $files;
+    }
+
+    public static function get_content($title)
+    {
+        require_once(__DIR__ . '/../config.php');
+        $song_filepath = config::songlibroot() . "/$title";
+        $content = file_get_contents($song_filepath);
+        return $content;
     }
 }
