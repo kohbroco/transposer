@@ -16,7 +16,8 @@ class songs
     {
         require_once(__DIR__ . '/../lib/songs.php');
         $songs = \transposer\lib\songs::get_all_songs();
-        $list = implode("\n", $songs);
+        $list = json_encode($songs);
+        //$list = implode("\n", $songs);
         return $list;
     }
     

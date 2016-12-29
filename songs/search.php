@@ -12,4 +12,4 @@ if(!$title){
     require_once(__DIR__ . '/../../lib/web/generic.php');
     \lib\web\generic::redirect(\transposer\config::webroot() . '/songs/all.php');
 }
-\transposer\controllers\songs::get_content($title, 'html');
+\transposer\controllers\songs::get_content($title, 'json');
