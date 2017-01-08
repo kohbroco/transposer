@@ -8,8 +8,6 @@
 
 namespace transposer\controllers;
 
-use transposer\config;
-
 class songs
 {
     public static function get_all_songs()
@@ -17,7 +15,6 @@ class songs
         require_once(__DIR__ . '/../lib/songs.php');
         $songs = \transposer\lib\songs::get_all_songs();
         $list = json_encode($songs);
-        //$list = implode("\n", $songs);
         return $list;
     }
     
@@ -42,5 +39,26 @@ class songs
                 echo $json;
                 break;
         }
+    }
+
+    /**
+     * @param $query
+     * @param $method
+     */
+    public static function search($query, $method)
+    {
+        require_once(__DIR__ . '/../lib/songs.php');
+        $content = \transposer\lib\songs::search($query);
+        switch ($method) {
+            case 'html':
+                $html_data = implode("<br>", $content);
+                echo $html_data;
+                break;
+            case 'json' :
+                $json = json_encode($content);
+                echo $json;
+                break;
+        }
+
     }
 }
