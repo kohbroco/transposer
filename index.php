@@ -46,16 +46,16 @@
                 textChanged();
             });
 
-            $(document).on('click','#search-box', function(event) {
+            $(document).on('click touchstart','#search-box', function(event) {
                 $(this).select();
                 textChanged();
             });
 
-            $(document).on('click', '.search-result', function(event){
+            $(document).on('click touchstart', '.search-result', function(event){
                 ajaxGetSongContent($(this).text());
             })
 
-            $(document).on('click', '#content-layout-container', function(event){
+            $(document).on('click touchstart', '#content-layout-container', function(event){
                 $("#search-results-container").hide();
             })
         }
