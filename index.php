@@ -51,7 +51,7 @@
                 textChanged();
             });
 
-            $(document).on('click touchstart', '.search-result', function(event){
+            $(document).on('click tap', '.search-result', function(event){
                 ajaxGetSongContent($(this).text());
             })
 
@@ -172,6 +172,7 @@
             color: black;
             background: #f7f8f9;
             border-radius: 3px;
+			cursor: pointer; /*Required to make touch events register*/
             padding: 10px 10px 10px 10px;
         }
         
