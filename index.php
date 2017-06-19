@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Transposer</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/lib/js/jquery/3.2.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
             initEvents();
@@ -68,7 +68,7 @@
         function ajaxSearch(query){
             $("#search-results-container").show();
             $.ajax({
-                url: "http://services.conradkoh.com/transposer/songs/search.php",
+                url: "/transposer/songs/search.php",
                 type: "GET",
                 dataType: "json",
                 data: {
@@ -86,7 +86,7 @@
 
         function ajaxGetSongContent(title){
             $.ajax({
-                url: "http://services.conradkoh.com/transposer/songs/get.php",
+                url: "/transposer/songs/get.php",
                 type: "GET",
                 dataType: "json",
                 data: {
