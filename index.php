@@ -123,7 +123,6 @@
         }
         #content-layout-container{
             width:100%;
-            height: 100%;
             margin: auto; /*Center the alignment*/
         }
         
@@ -191,7 +190,7 @@
             width: 70%;
             background: white;
             padding: 20px;
-            margin: auto;
+            margin: 10 auto;
             white-space: pre-wrap;
             box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
         }
