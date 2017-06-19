@@ -127,9 +127,12 @@
         }
         
         #search-container{
-            padding: 15px 0px 0px 0px;
+            padding: 2px 0px 0px 0px;
             width: 70%;
-            margin: auto; /*Center the alignment*/
+			position: absolute;
+			top: 65px;
+			transform: translateX(-50%);
+			left: 50%;
         }
         #content-container{
             padding: 15px 0px 0px 0px;
@@ -137,6 +140,8 @@
             margin: auto; /*Center the alignment*/
         }
         #search-box-container{
+            width: 70%;
+            margin: auto; /*Center the alignment*/
             background: white;
             padding: 5px;
             border-radius: 2px;
@@ -195,16 +200,29 @@
             margin: 0px;
             font-family: 'Helvetica', 'Arial', sans-serif;
         }
+		.center{
+			height: 100%;
+			width: 100%;
+			margin: auto;
+		}
     </style>
 </head>
 <body>
 <div id="app-container">
     <!-- TOP LAYOUT -->
     <div id="top-layout-container">
+		<table class="center">
+			<tr><td></td></tr>
+			<tr>
+				<td>
+					<div id="search-box-container">
+						<input id="search-box" type="text"></input>
+					</div>
+				</td>
+			</tr>
+			<tr><td></td></tr>
+		</table>
         <div id="search-container">
-            <div id="search-box-container">
-                <input id="search-box" type="text"></input>
-            </div>
             <div id="search-results-container">
                 <div id="search-results-view"></div>
             </div>
