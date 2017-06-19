@@ -1,4 +1,5 @@
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
     <title>Transposer</title>
     <script src="/lib/js/jquery/3.2.1/jquery.min.js"></script>
@@ -136,7 +137,7 @@
         }
         #content-container{
             padding: 15px 0px 0px 0px;
-            width: 70%;
+            width: 90%;
             margin: auto; /*Center the alignment*/
         }
         #search-box-container{
