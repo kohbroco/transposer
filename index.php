@@ -130,7 +130,7 @@
             padding: 2px 0px 0px 0px;
             width: 70%;
 			position: absolute;
-			top: 65px;
+			top: 70px;
 			transform: translateX(-50%);
 			left: 50%;
         }
@@ -151,7 +151,7 @@
         #search-box{
             border: none;
             width: 100%;
-            height: auto;
+            height: 50px;
             font-size: 34px;
             outline: none;
             position: relative;
