@@ -8,6 +8,7 @@
             initEvents();
             initElements();
             ajaxSearch("");
+            $('#search-box').focus();
         });
 
         function buildTable(data){
